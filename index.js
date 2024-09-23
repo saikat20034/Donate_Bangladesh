@@ -1,21 +1,60 @@
 // Get references to DOM elements
 const donationBtn1 = document.getElementById('donationBtn1');
+const donationBtn2 = document.getElementById('donationBtn2');
+const donationBtn3 = document.getElementById('donationBtn3');
+const accountValue = document.getElementById('accountValue')
 const donateValue = document.getElementById('donateValue');
+const donateValue2 = document.getElementById('donateValue2');
+const donateValue3 = document.getElementById('donateValue3');
 const historyBtn = document.getElementById('historyBtn');
 const donationSection = document.getElementById('donationInput');
+const donationSection2 = document.getElementById('donationInput2');
+const donationSection3 = document.getElementById('donationInput3');
 const historySection = document.getElementById('historySection');
 const modal = document.getElementById('modal');
 const modalMessage = document.getElementById('modalMessage');
 const balanceElement = document.querySelector('.font-bold.text-yellow-500');
 
+console.log(accountValue);
+
 donationBtn1.addEventListener('click', () => {
   const donationSection = document.getElementById('donationInput');
   const donationValue = donationSection.value
   const donateValue = document.getElementById('donateValue');
-
-  console.log(donateValue.textContent)
-
+  let previousValue = parseFloat(donateValue.textContent);
+  const inputValue = parseInt(donationValue);
+  const newValue = previousValue + inputValue
+  donateValue.innerText = newValue
+  const accountBalance = parseFloat(accountValue.textContent) - inputValue
+  accountValue.innerText=accountBalance
+  console.log(accountBalance);
 })
+
+donationBtn2.addEventListener('click', () => {
+  const donationSection2 = document.getElementById('donationInput2');
+  const donationValue2 = donationSection2.value;
+  const donateValue2 = document.getElementById('donateValue2');
+  let previousValue = parseFloat(donateValue2.textContent);
+  const inputValue = parseInt(donationValue2);
+  const newValue2 = previousValue + inputValue;
+  donateValue2.innerText = newValue2;
+  const accountBalance = parseFloat(accountValue.textContent) - inputValue;
+  accountValue.innerText = accountBalance;
+  console.log(accountBalance);
+});
+
+donationBtn3.addEventListener('click', () => {
+  const donationSection3 = document.getElementById('donationInput3');
+  const donationValue3 = donationSection3.value;
+  const donateValue3 = document.getElementById('donateValue3');
+  let previousValue = parseFloat(donateValue3.textContent);
+  const inputValue = parseInt(donationValue3);
+  const newValue3 = previousValue + inputValue;
+  donateValue3.innerText = newValue3;
+  const accountBalance = parseFloat(accountValue.textContent) - inputValue;
+  accountValue.innerText = accountBalance;
+  console.log(accountBalance);
+});
 
 
 //----------------------------------------------------------------------------------------------------

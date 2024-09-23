@@ -13,9 +13,9 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100">
+  <body class="">
     <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50 p-4">
+    <nav class="bg-[#F9F7F3] shadow-md sticky top-0 z-50 p-4">
       <div class="container mx-auto flex items-center justify-between">
         <!-- Blog Button -->
         <a
@@ -33,7 +33,7 @@
         <!-- Account Balance -->
         <div class="flex items-center space-x-2">
           <img src="./assets/coin.png" alt="Coin" class="h-6" />
-          <span class="font-bold text-yellow-500">5500 BDT</span>
+          <span class="font-bold text-yellow-500"> <span id="accountValue">5500</span> BDT</span>
         </div>
       </div>
 
@@ -52,11 +52,11 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mx-auto p-6">
+    <div class="container pl-[150px] pr-[150px] p-6">
       <!-- Donation Section -->
       <div id="donationSection" class="grid grid-cols-1  gap-6">
         <!-- Donation Card -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="bg-[#FFF] rounded-lg overflow-hidden">
           <div class="flex">
             <!-- Image -->
             <img
@@ -65,7 +65,7 @@
               class="w-1/3 object-cover p-6 pe-0"
             />
 
-            <!-- Donation Info -->
+            <!-- Donation Info for Noakhali -->
             <div class="w-2/3 p-4">
               <h2 class="text-xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
@@ -75,7 +75,7 @@
               </p>
               <div class="flex items-center mb-4">
                 <img src="./assets/coin.png" alt="Coin" class="h-5 mr-2" />
-                <span class="font-bold text-yellow-500"> <span id="donateValue">0</span>BDT</span>
+                <span class="font-bold text-yellow-500 "> <span class="me-1" id="donateValue">0</span>BDT</span>
               </div>
 
               <!-- Donation Input for Noakhali -->
@@ -94,7 +94,7 @@
           </div>
         </div>
 
-        <!-- Additional Donation Cards... -->
+        <!--Donation Cards for feni -->
           <div class="bg-white shadow-lg rounded-lg overflow-hidden"></div>
           <div class="flex">
             <!-- Image -->
@@ -104,7 +104,7 @@
               class="w-1/3 object-cover p-6 pe-0"
             />
 
-            <!-- Donation Info -->
+            <!-- Donation Info for feni-->
             <div class="w-2/3 p-4">
               <h2 class="text-xl font-bold">
                Donate for Flood Relief in Feni,Bangladesh
@@ -114,18 +114,18 @@
               </p>
               <div class="flex items-center mb-4">
                 <img src="./assets/coin.png" alt="Coin" class="h-5 mr-2" />
-                <span class="font-bold text-yellow-500">0 BDT</span>
+                <span class="font-bold text-yellow-500 pe-1"><span id="donateValue2">0</span> BDT</span>
               </div>
 
-              <!-- Donation Input -->
+              <!-- Donation Input for feni -->
               <input
-                type="number"
-                placeholder="Write Donation Amount"
+                type="text"
+                placeholder="Write Donation Amount" id="donationInput2"
                 class="border rounded p-2 w-full mb-4"
               />
 
-              <!-- Donate Button -->
-              <button class="w-full bg-green-500 text-white py-2 rounded">
+              <!-- Donate Button for feni -->
+              <button id="donationBtn2" class="w-full bg-green-500 text-white py-2 rounded">
                 Donate Now
               </button>
             </div>
@@ -140,7 +140,7 @@
               class="w-1/3 object-cover p-6 pe-0"
             />
 
-            <!-- Donation Info -->
+            <!-- Donation Info for qouta -->
             <div class="w-2/3 p-4">
               <h2 class="text-xl font-bold">
                 Aid for Injured in the Quota Movement
@@ -150,18 +150,18 @@
               </p>
               <div class="flex items-center mb-4">
                 <img src="./assets/coin.png" alt="Coin" class="h-5 mr-2" />
-                <span class="font-bold text-yellow-500">0 BDT</span>
+                <span class="font-bold text-yellow-500"><span id="donateValue3">0</span> BDT</span>
               </div>
 
-              <!-- Donation Input -->
+              <!-- Donation Input for Qouata -->
               <input
-                type="number"
-                placeholder="Write Donation Amount"
+                type="text"
+                placeholder="Write Donation Amount" id="donationInput3"
                 class="border rounded p-2 w-full mb-4"
               />
 
-              <!-- Donate Button -->
-              <button class="w-full bg-green-500 text-white py-2 rounded">
+              <!-- Donate Button  for qouta-->
+              <button id="donationBtn3" class="w-full bg-green-500 text-white py-2 rounded">
                 Donate Now
               </button>
             </div>
@@ -196,6 +196,8 @@
     <!-- js connection -->
 
     <script src="./index.js"></script>
+
+    <footer class="bg-[#F9F7F3] h-[150px]"></footer>
 
   </body>
 </html>
