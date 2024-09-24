@@ -37,6 +37,17 @@ function donationButton() {
 
 }
 
+historyBtn.addEventListener('click', function () {
+  const mainContainer = document.getElementById('mainContainer');
+  mainContainer.classList.add('hidden')
+
+})
+
+donationBtn.addEventListener('click', function () {
+  const mainContainer = document.getElementById('mainContainer');
+  mainContainer.classList.remove('hidden');
+  historySection.classList.add('hidden')
+});
 
 function positiveCheaker(inputValue) {
   if (inputValue === 0 || inputValue < 0 || isNaN(inputValue) === true) {
@@ -52,9 +63,8 @@ function newDonation1(inputValue) {
    const now = new Date();
     const formattedDateTime = now.toString();
     // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
-  newDiv.innerHTML =
-    `<h2>${inputValue} tk donated for noakhali</h2><p>Date: ${formattedDateTime}</p>`;
-  newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
+  newDiv.innerHTML = `<div class=" md:w-[1140px] w-full border-2 mx-auto rounded-2xl bg-[#FFF] p-3"><h2 class="text-[#111] text-xl font-bold">${inputValue} Taka Donated for Flood Rlief-2024 in Noakhali,Bangladesh</h2><p class="text-[#111] text-base font-light">Date: ${formattedDateTime}</p></div>`;
+  newDiv.classList.add('p-4', 'mt-4', 'rounded',);
   document.getElementById('historySection').appendChild(newDiv);
 }
 function newDonation2(inputValue) {
@@ -62,8 +72,8 @@ function newDonation2(inputValue) {
   const now = new Date();
   const formattedDateTime = now.toString();
   // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
-  newDiv.innerHTML = `<h2>${inputValue} tk donated for feni</h2><p>Date: ${formattedDateTime}</p>`;
-  newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
+  newDiv.innerHTML = `<div class=" md:w-[1140px] w-full border-2 mx-auto rounded-2xl bg-[#FFF] p-3"><h2 class="text-[#111] text-xl font-bold">${inputValue}Taka Donated for Famine-2024 at Feni,Bangladesh</h2><p class="text-[#111] text-base font-light">Date: ${formattedDateTime}</p></div>`;
+  newDiv.classList.add('p-4', 'mt-4', 'rounded',);
   document.getElementById('historySection').appendChild(newDiv);
 }
 function newDonation3(inputValue) {
@@ -71,8 +81,8 @@ function newDonation3(inputValue) {
   const now = new Date();
   const formattedDateTime = now.toString();
   // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
-  newDiv.innerHTML = `<h2>${inputValue} tk donated for qouta</h2><p>Date: ${formattedDateTime}</p>`;
-  newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
+  newDiv.innerHTML = `<div class=" md:w-[1140px] w-full border-2 mx-auto rounded-2xl bg-[#FFF] p-3"><h2 class="text-[#111] text-xl font-bold">${inputValue}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2><p class="text-[#111] text-base font-light">Date: ${formattedDateTime}</p></div>`;
+  newDiv.classList.add('p-4', 'mt-4', 'rounded',);
   document.getElementById('historySection').appendChild(newDiv);
 }
 

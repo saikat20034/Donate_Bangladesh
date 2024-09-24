@@ -12,12 +12,12 @@
   </head>
   <body class="">
     <!-- Navbar -->
-    <nav class="bg-[#F9F7F3] shadow-md sticky opacity-65 top-0 z-50 p-4">
-      <div class="container mx-auto flex items-center justify-between">
+    <nav class=" shadow-md sticky opacity-65 top-0 z-50 p-4">
+      <div class=" bg-[#F9F7F3] container mx-auto flex items-center justify-between">
         <!-- Blog Button -->
         <a
           href="blog.html"
-          class="bg-[#B4F461] text-[#111111] px-4 py-2 rounded-full"
+          class="bg-[#B4F461] text-[#111] text-xl font-semibold px-4 border-2 border-[#1111114D] py-2 rounded-lg"
           >Blog</a
         >
 
@@ -38,32 +38,32 @@
       <div class="flex justify-center space-x-4 mt-4">
         <button onclick="donationButton()"
           id="donationBtn"
-          class="bg-[#B4F461] text-[#111111] py-2 px-6 rounded-full active-tab"
+          class="bg-[#B4F461] text-[#111111] text-xl font-semibold py-2 px-6 rounded-lg border-2 border-[#1111114D] active-tab"
         >
           Donation
         </button>
-        <button onclick="historyButton()" id="historyBtn" class="bg-gray-200 py-2 px-6 rounded-full">
+        <button onclick="historyButton()" id="historyBtn" class="bg-gray-200 text-xl font-semibold py-2 px-6 rounded-lg border-2 border-[#1111114D]">
           History
         </button>
       </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container pl-[150px] pr-[150px] p-6">
+    <div id="mainContainer" class="container md:pl-[150px] md:pr-[150px] p-6">
       <!-- Donation Section -->
       <div id="donationSection" class="grid grid-cols-1  gap-6">
         <!-- Donation Card -->
-        <div class="bg-[#FFF] rounded-lg overflow-hidden">
-          <div class="flex">
+        <div class="bg-[#FFF] rounded-lg ">
+          <div class="flex md:flex-row flex-col rounded-2xl border-solid border-2 border-[#1111111A]">
             <!-- Image -->
             <img
               src="./assets/noakhali.png"
               alt="Donation Image"
-              class="w-1/3 object-cover p-6 pe-0"
+              class="md:w-1/3 w-full object-cover p-6 md:pe-0"
             />
 
             <!-- Donation Info for Noakhali -->
-            <div class="w-2/3 p-4">
+            <div class="md:w-2/3 w-full p-4 ">
               <h2 class="text-xl font-bold">
                 Donate for Flood at Noakhali, Bangladesh
               </h2>
@@ -93,16 +93,16 @@
 
         <!--Donation Cards for feni -->
           <div class="bg-white shadow-lg rounded-lg overflow-hidden"></div>
-          <div class="flex">
+          <div class="flex md:flex-row flex-col rounded-2xl border-solid border-2 border-[#1111111A]">
             <!-- Image -->
             <img
               src="./assets/feni.png"
               alt="Donation Image"
-              class="w-1/3 object-cover p-6 pe-0"
+              class="md:w-1/3 w-full object-cover p-6 md:pe-0"
             />
 
             <!-- Donation Info for feni-->
-            <div class="w-2/3 p-4">
+            <div class="md:w-2/3 w-full p-4">
               <h2 class="text-xl font-bold">
                Donate for Flood Relief in Feni,Bangladesh
               </h2>
@@ -128,17 +128,17 @@
             </div>
           </div>
 
-       <div class="bg-white shadow-lg rounded-lg overflow-hidden"></div>
-          <div class="flex">
+       <div class="bg-white shadow-lg rounded-lg overflow-hidden "></div>
+          <div class="flex md:flex-row flex-col rounded-2xl border-solid border-2 border-[#1111111A]">
             <!-- Image -->
             <img
               src="./assets/quota-protest.png"
               alt="Donation Image"
-              class="w-1/3 object-cover p-6 pe-0"
+              class="md:w-1/3 w-full object-cover p-6 md:pe-0"
             />
 
             <!-- Donation Info for qouta -->
-            <div class="w-2/3 p-4">
+            <div class="md:w-2/3 w-full p-4">
               <h2 class="text-xl font-bold">
                 Aid for Injured in the Quota Movement
               </h2>
