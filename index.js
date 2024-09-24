@@ -46,6 +46,37 @@ function positiveCheaker(inputValue) {
   return true
 }
 
+
+function newDonation1(inputValue) {
+  const newDiv = document.createElement('div');
+   const now = new Date();
+    const formattedDateTime = now.toString();
+    // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
+  newDiv.innerHTML =
+    `<h2>${inputValue}tk donated for noakhali</h2><p>Date: ${formattedDateTime}</p>`;
+  newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
+  document.getElementById('historySection').appendChild(newDiv);
+}
+function newDonation2(inputValue) {
+  const newDiv = document.createElement('div');
+  const now = new Date();
+  const formattedDateTime = now.toString();
+  // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
+  newDiv.innerHTML = `<h2>${inputValue} tk donated for feni</h2><p>Date: ${formattedDateTime}</p>`;
+  newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
+  document.getElementById('historySection').appendChild(newDiv);
+}
+function newDonation3(inputValue) {
+  const newDiv = document.createElement('div');
+  const now = new Date();
+  const formattedDateTime = now.toString();
+  // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
+  newDiv.innerHTML = `<h2>${inputValue}donated for qouta</h2><p>Date: ${formattedDateTime}</p>`;
+  newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
+  document.getElementById('historySection').appendChild(newDiv);
+}
+
+
 donationBtn1.addEventListener('click', () => {
   const donationSection = document.getElementById('donationInput');
   const donationValue = donationSection.value
@@ -58,7 +89,8 @@ donationBtn1.addEventListener('click', () => {
      donateValue.innerText = newValue;
      const accountBalance = parseFloat(accountValue.textContent) - inputValue;
      accountValue.innerText = accountBalance;
-     console.log(accountBalance);
+    console.log(accountBalance);
+    newDonation1(inputValue);
      openModal();
   }
 })
@@ -75,7 +107,8 @@ donationBtn2.addEventListener('click', () => {
      donateValue2.innerText = newValue2;
      const accountBalance = parseFloat(accountValue.textContent) - inputValue;
      accountValue.innerText = accountBalance;
-     console.log(accountBalance);
+    console.log(accountBalance);
+    newDonation2(inputValue);
      openModal();
   }
 
@@ -93,7 +126,8 @@ donationBtn3.addEventListener('click', () => {
      donateValue3.innerText = newValue3;
      const accountBalance = parseFloat(accountValue.textContent) - inputValue;
      accountValue.innerText = accountBalance;
-     console.log(accountBalance);
+    console.log(accountBalance);
+    newDonation3(inputValue);
      openModal();
   }
 
