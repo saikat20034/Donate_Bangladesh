@@ -71,7 +71,7 @@ function newDonation3(inputValue) {
   const now = new Date();
   const formattedDateTime = now.toString();
   // document.getElementById('currentDateTime').innerHTML = `Date : ${formattedDateTime}`;
-  newDiv.innerHTML = `<h2>${inputValue}donated for qouta</h2><p>Date: ${formattedDateTime}</p>`;
+  newDiv.innerHTML = `<h2>${inputValue} tk donated for qouta</h2><p>Date: ${formattedDateTime}</p>`;
   newDiv.classList.add('bg-gray-100', 'p-4', 'mt-4', 'rounded', 'shadow-md');
   document.getElementById('historySection').appendChild(newDiv);
 }
