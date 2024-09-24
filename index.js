@@ -12,22 +12,35 @@ const donationSection2 = document.getElementById('donationInput2');
 const donationSection3 = document.getElementById('donationInput3');
 const historySection = document.getElementById('historySection');
 const modal = document.getElementById('modal');
+const closeModal = document.getElementById('closeModal');
 const modalMessage = document.getElementById('modalMessage');
 const balanceElement = document.querySelector('.font-bold.text-yellow-500');
 
 console.log(accountValue);
+
+function positiveCheaker(inputValue) {
+  if (inputValue === 0 || inputValue < 0 || isNaN(inputValue) === true) {
+    alert('invalid Number')
+    return false
+  }
+  return true
+}
 
 donationBtn1.addEventListener('click', () => {
   const donationSection = document.getElementById('donationInput');
   const donationValue = donationSection.value
   const donateValue = document.getElementById('donateValue');
   let previousValue = parseFloat(donateValue.textContent);
-  const inputValue = parseInt(donationValue);
-  const newValue = previousValue + inputValue
-  donateValue.innerText = newValue
-  const accountBalance = parseFloat(accountValue.textContent) - inputValue
-  accountValue.innerText=accountBalance
-  console.log(accountBalance);
+  const inputValue = parseFloat(donationValue);
+  const ifPositive=   positiveCheaker(inputValue)
+  if (ifPositive) {
+     const newValue = previousValue + inputValue;
+     donateValue.innerText = newValue;
+     const accountBalance = parseFloat(accountValue.textContent) - inputValue;
+     accountValue.innerText = accountBalance;
+     console.log(accountBalance);
+     openModal();
+  }
 })
 
 donationBtn2.addEventListener('click', () => {
@@ -36,11 +49,16 @@ donationBtn2.addEventListener('click', () => {
   const donateValue2 = document.getElementById('donateValue2');
   let previousValue = parseFloat(donateValue2.textContent);
   const inputValue = parseInt(donationValue2);
-  const newValue2 = previousValue + inputValue;
-  donateValue2.innerText = newValue2;
-  const accountBalance = parseFloat(accountValue.textContent) - inputValue;
-  accountValue.innerText = accountBalance;
-  console.log(accountBalance);
+  const ifPositive = positiveCheaker(inputValue);
+  if (ifPositive) {
+     const newValue2 = previousValue + inputValue;
+     donateValue2.innerText = newValue2;
+     const accountBalance = parseFloat(accountValue.textContent) - inputValue;
+     accountValue.innerText = accountBalance;
+     console.log(accountBalance);
+     openModal();
+  }
+
 });
 
 donationBtn3.addEventListener('click', () => {
@@ -49,12 +67,34 @@ donationBtn3.addEventListener('click', () => {
   const donateValue3 = document.getElementById('donateValue3');
   let previousValue = parseFloat(donateValue3.textContent);
   const inputValue = parseInt(donationValue3);
-  const newValue3 = previousValue + inputValue;
-  donateValue3.innerText = newValue3;
-  const accountBalance = parseFloat(accountValue.textContent) - inputValue;
-  accountValue.innerText = accountBalance;
-  console.log(accountBalance);
+  const ifPositive = positiveCheaker(inputValue);
+  if (ifPositive) {
+     const newValue3 = previousValue + inputValue;
+     donateValue3.innerText = newValue3;
+     const accountBalance = parseFloat(accountValue.textContent) - inputValue;
+     accountValue.innerText = accountBalance;
+     console.log(accountBalance);
+     openModal();
+  }
+
 });
+
+function openModal () {
+ document.getElementById('modal').classList.remove('hidden');
+ document.getElementById('modal').classList.add('flex');
+}
+
+ // Close the modal when "Close Confirmation" button is clicked
+ document.getElementById('closeModal').addEventListener('click', function () {
+   document.getElementById('modal').classList.add('hidden');
+   document.getElementById('modal').classList.remove('flex');
+ });
+
+  //  history section
+document.getElementById('historyBtn').addEventListener('click', function () {
+  document.getElementById('historySection').classList.remove('hidden');
+})
+
 
 
 //----------------------------------------------------------------------------------------------------
