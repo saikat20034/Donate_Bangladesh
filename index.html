@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src= "https://cdn.tailwindcss.com"></script>
     <style>
       /* Additional styles for active tab buttons */
-      .active-tab {
-        background-color: #4caf50; /* You can adjust this color to match your design */
-        color: white;
-      }
+     
     </style>
   </head>
   <body class="">
@@ -39,13 +36,13 @@
 
       <!-- Donation & History Tabs -->
       <div class="flex justify-center space-x-4 mt-4">
-        <button
+        <button onclick="donationButton()"
           id="donationBtn"
           class="bg-[#B4F461] text-[#111111] py-2 px-6 rounded-full active-tab"
         >
           Donation
         </button>
-        <button id="historyBtn" class="bg-gray-200 py-2 px-6 rounded-full">
+        <button onclick="historyButton()" id="historyBtn" class="bg-gray-200 py-2 px-6 rounded-full">
           History
         </button>
       </div>

@@ -1,4 +1,6 @@
 // Get references to DOM elements
+const donationBtn = document.getElementById('donationBtn');
+const historyBtn = document.getElementById('historyBtn');
 const donationBtn1 = document.getElementById('donationBtn1');
 const donationBtn2 = document.getElementById('donationBtn2');
 const donationBtn3 = document.getElementById('donationBtn3');
@@ -6,7 +8,6 @@ const accountValue = document.getElementById('accountValue')
 const donateValue = document.getElementById('donateValue');
 const donateValue2 = document.getElementById('donateValue2');
 const donateValue3 = document.getElementById('donateValue3');
-const historyBtn = document.getElementById('historyBtn');
 const donationSection = document.getElementById('donationInput');
 const donationSection2 = document.getElementById('donationInput2');
 const donationSection3 = document.getElementById('donationInput3');
@@ -17,6 +18,25 @@ const modalMessage = document.getElementById('modalMessage');
 const balanceElement = document.querySelector('.font-bold.text-yellow-500');
 
 console.log(accountValue);
+
+
+function historyButton() {
+  const donationBtn = document.getElementById('donationBtn');
+  const historyBtn = document.getElementById('historyBtn');
+  donationBtn.classList.remove('bg-[#B4F461]');
+  historyBtn.classList.remove('bg-gray-200')
+  historyBtn.classList.add('bg-[#B4F461]');
+ }
+function donationButton() {
+  console.log('dontion');
+  const donationBtn = document.getElementById('donationBtn');
+  const historyBtn = document.getElementById('historyBtn');
+  donationBtn.classList.remove('bg-[#B4F461]');
+  donationBtn.classList.add('bg-[#B4F461]');
+  historyBtn.classList.remove('bg-[#B4F461]');
+
+}
+
 
 function positiveCheaker(inputValue) {
   if (inputValue === 0 || inputValue < 0 || isNaN(inputValue) === true) {
@@ -95,6 +115,32 @@ document.getElementById('historyBtn').addEventListener('click', function () {
   document.getElementById('historySection').classList.remove('hidden');
 })
 
+ document
+   .getElementById('transaction-form')
+   .addEventListener('submit', function (e) {
+     e.preventDefault(); // Prevent form submission and page reload
+
+     // Get form values
+     const amount = document.getElementById('amount').value;
+     const purpose = document.getElementById('purpose').value;
+     const location = document.getElementById('location').value;
+     const date = new Date().toString(); // Current date and time
+
+     // Create a new transaction entry
+     const transaction = document.createElement('div');
+     transaction.classList.add('bg-gray-50', 'p-4', 'rounded-lg', 'shadow-sm');
+
+     transaction.innerHTML = `
+                <p class="text-lg font-semibold">${amount} Taka is Donated for ${purpose} at ${location}</p>
+                <p class="text-sm text-gray-500">Date: ${date}</p>
+            `;
+
+     // Append the new transaction to the list
+     document.getElementById('transactions').appendChild(transaction);
+
+     // Reset form
+     e.target.reset();
+   });
 
 
 //----------------------------------------------------------------------------------------------------
