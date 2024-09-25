@@ -15,7 +15,6 @@ const historySection = document.getElementById('historySection');
 const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
 const modalMessage = document.getElementById('modalMessage');
-;
 
 console.log(accountValue);
 
@@ -50,7 +49,8 @@ donationBtn.addEventListener('click', function () {
 });
 
 function positiveCheaker(inputValue) {
-  if (inputValue === 0 || inputValue < 0 || isNaN(inputValue) === true) {
+ 
+  if (inputValue === 0 || inputValue < 0 || isNaN(inputValue) === true || inputValue>accountValue.textContent) {
     alert('invalid Number')
     return false
   }
