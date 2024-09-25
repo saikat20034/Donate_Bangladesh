@@ -169,26 +169,24 @@
 
       <!-- History Section -->
       <div id="historySection" class="hidden">
-        <!-- <h2 class="text-xl font-bold mb-4">Donation History</h2>
-        <ul class="list-disc pl-5">
-          <p>history</p>
-        </ul> -->
       </div>
-    <!-- </div> -->
 
     <!-- Modal (Success Message) -->
-     <div id="modal" class="fixed inset-0 items-center justify-center hidden bg-black bg-opacity-50">
-        <div class="bg-white rounded-lg shadow-lg p-6 w-96 text-center">
-            <h1 class="text-2xl font-bold mb-4">Congrats!</h1>
-            <div class="flex justify-center mb-4">
-                <!-- Placeholder for Coin Icon -->
-                <img src="./assets/coin.png" alt="Coin Icon" class="w-12 h-12">
-            </div>
-            <p class="text-gray-600 mb-4">You Have Donated for Humankind</p>
-            <h2 class="text-lg font-semibold text-blue-500 mb-6">Successfully</h2>
-            <button id="closeModal" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Close Confirmation</button>
-        </div>
+      <!-- Modal Structure -->
+  <div id="modal" class="fixed inset-0 flex items-center justify-center hidden bg-black bg-opacity-50 z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-xs md:max-w-md lg:max-w-lg text-center mx-4">
+      <h1 class="text-2xl font-bold mb-4">Congrats!</h1>
+      <div class="flex justify-center mb-4">
+        <!-- Placeholder for Coin Icon -->
+        <img src="./assets/coin.png" alt="Coin Icon" class="w-12 h-12">
+      </div>
+      <p class="text-gray-600 mb-4">You Have Donated for Humankind</p>
+      <h2 class="text-lg font-semibold text-blue-500 mb-6">Successfully</h2>
+      <button id="closeModal" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Close Confirmation
+      </button>
     </div>
+  </div>
 
     <!-- js connection -->
 

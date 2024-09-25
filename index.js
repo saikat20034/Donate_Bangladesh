@@ -15,7 +15,7 @@ const historySection = document.getElementById('historySection');
 const modal = document.getElementById('modal');
 const closeModal = document.getElementById('closeModal');
 const modalMessage = document.getElementById('modalMessage');
-const balanceElement = document.querySelector('.font-bold.text-yellow-500');
+;
 
 console.log(accountValue);
 
